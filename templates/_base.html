@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/static/jquery/js/jquery-ui-1.10.4.custom.min.js"></script>
+    <link type="text/css" rel="stylehseet" href="https://code.jquery.com/ui/1.10.4/themes/dark-hive/jquery-ui.css" />
     <link type="text/css" rel="stylesheet" href="/static/site.css" />
   </head>
   <body class="page-{{current_page}}">
@@ -14,6 +17,7 @@
     
         {% block content %}{% endblock %}
       </div>
+      <div id="book-now"><a href="#">&nbsp;</a>;</div>
     </div>
   </body>
 </html>

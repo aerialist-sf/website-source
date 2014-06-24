@@ -61,18 +61,15 @@ body.page-contact .supercolumn {
 ul#navbar {
   width: 100%;
   overflow: auto;
-  padding: 0;
+  padding: 0 150px 0 100px;
   list-style: none;
   border-bottom: 1px solid #fff;
   margin: 0 0 1em 0;
 }
 
-ul#navbar li {
-}
-
 ul#navbar li a,
 ul#navbar li a:visited {
-  width: 200px;
+  width: 150px;
   text-align: center;
   display: block;
   float: left;
@@ -126,3 +123,17 @@ ul#navbar li.active a {
 body.page-contact {
 }
 
+
+#book-now {
+  position: absolute;
+  top: -10px;
+  height: 88px;
+  width: 130px;
+  left: 1055px;
+  background: transparent url(/static/img/book_now.png) no-repeat 0 0;
+}
+#book-now a {
+  display: block;
+  height: 88px;
+  width: 130px;
+}
