@@ -29,10 +29,15 @@ p {
 
 /* structure */
 .supercolumn {
-  background: #000 url(/static/img/front.jpg) no-repeat 100% 0;
-  width: 1200px;
+  width: 1400px;
   min-height: 1000px;
   margin: 0 auto;
+}
+body.page-index .supercolumn {
+  background: #000 url(/static/img/front.jpg) no-repeat 100% 0;
+}
+body.page-contact .supercolumn {
+  background: #000 url(/static/img/contact.jpg) no-repeat 100% 0;
 }
 .column {
   width: 1000px;
@@ -102,7 +107,7 @@ ul#navbar li.active a {
 .bio-unit {
   font-family: AracneUC;
   font-size: 24pt;
-  letter-spacing: 1px;
+  letter-spacing: 1.6px;
 }
 
 .portrait {
@@ -119,6 +124,5 @@ ul#navbar li.active a {
 }
 
 body.page-contact {
-  background: #000 url(/static/img/contact.jpg) no-repeat 100% 0;
 }
 
