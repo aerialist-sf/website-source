@@ -8,12 +8,12 @@ app = Flask(__name__,
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 
 @app.route("/")
-@app.route("/<path>")
-def main(path=""):
+@app.route("/<path:request_path>/")
+def main(request_path=""):
     """
     Serve the files generically.
     """
-    f_path = os.path.join(BASE_PATH, "site/", path, "index.html")
+    f_path = os.path.join(BASE_PATH, "site/", request_path, "index.html")
     print "looking for %s" % f_path
     if not os.path.exists(f_path):
         return "404"
