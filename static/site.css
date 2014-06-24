@@ -16,9 +16,15 @@ body {
   margin: 0;
   background-color: #000;
   color: rgb(186, 200, 213);
+  font-family: Aracne;
+  font-size: 14pt;
 }
 a {
   text-decoration: none;
+}
+p {
+  margin: .5em 0;
+  padding: 0 3em;
 }
 
 /* structure */
@@ -31,6 +37,13 @@ a {
   width: 50%;
   overflow: none;
   float: left;
+}
+.half-col.first {
+  padding-top: 3em;
+}
+
+.centered {
+  text-align: center;
 }
 
 /* elements */
@@ -53,8 +66,6 @@ ul#navbar li a:visited {
   display: block;
   float: left;
   padding: .25em 0;
-  font-family: Aracne;
-  font-size: 18pt;
   color: rgb(186, 200, 213);
 }
 
@@ -93,4 +104,14 @@ ul#navbar li.active a {
 }
 .portrait img {
   width: 630px;
+}
+
+.bigdot span {
+  color: rgb(201, 9, 213);
+  font-size: 5em;
+  line-height: .5em;
+}
+
+body.page-contact {
+  background: #000 url(/static/img/) no-repeat 90% 0;
 }
