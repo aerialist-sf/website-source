@@ -4,14 +4,16 @@
     <link type="text/css" rel="stylesheet" href="/static/site.css" />
   </head>
   <body class="page-{{current_page}}">
-    <div class="column">
-      <ul id="navbar">
-        {% for page in nav_pages %}
-        <li{% if page.id == current_page %} class="active"{% endif %}><a href="{{page.url}}">{{ page.name }}</a></li>
-        {% endfor %}
-      </ul>
-  
-      {% block content %}{% endblock %}
+    <div class="supercolumn">
+      <div class="column">
+        <ul id="navbar">
+          {% for page in nav_pages %}
+          <li{% if page.id == current_page %} class="active"{% endif %}><a href="{{page.url}}">{{ page.name }}</a></li>
+          {% endfor %}
+        </ul>
+    
+        {% block content %}{% endblock %}
+      </div>
     </div>
   </body>
 </html>

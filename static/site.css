@@ -28,9 +28,15 @@ p {
 }
 
 /* structure */
+.supercolumn {
+  background: #000 url(/static/img/front.jpg) no-repeat 100% 0;
+  width: 1200px;
+  min-height: 1000px;
+  margin: 0 auto;
+}
 .column {
   width: 1000px;
-  overflow: none;
+  overflow: auto;
   margin: 0 auto;
 }
 .half-col {
@@ -113,5 +119,6 @@ ul#navbar li.active a {
 }
 
 body.page-contact {
-  background: #000 url(/static/img/) no-repeat 90% 0;
+  background: #000 url(/static/img/contact.jpg) no-repeat 100% 0;
 }
+
