@@ -1,0 +1,12 @@
+
+<ul id="navbar">
+  {% for nav,title in links %}
+  <li{% if nav == current_nav %} class="active"{% endif %}><a href="{{nav}}">{{ title }}</a></li>
+  {% endfor %}
+  
+  <div class="text-column">
+  </div>
+
+  <div class="portrait-column">
+  </div>
+</ul>
