@@ -11,21 +11,29 @@
   src: url(/static/fonts/MonicasSalonShadowNF.ttf);
 }
 
+/* basics */
 body {
   margin: 0;
   background-color: #000;
-  color: #fff;
+  color: rgb(186, 200, 213);
 }
 a {
   text-decoration: none;
 }
 
+/* structure */
 .column {
   width: 1000px;
   overflow: none;
   margin: 0 auto;
 }
+.half-col {
+  width: 50%;
+  overflow: none;
+  float: left;
+}
 
+/* elements */
 ul#navbar {
   width: 100%;
   overflow: auto;
@@ -53,4 +61,36 @@ ul#navbar li a:visited {
 ul#navbar li a:hover,
 ul#navbar li.active a {
   background-color: rgb(45,45,45);
+}
+
+.hero-unit {
+  padding: .5em;
+  margin: 4em 0 8em;
+  text-align: center;
+}
+.hero-unit .lead {
+  color: #fff;
+  font-variant: small-caps;
+  font-family: MonicasSalon;
+  font-size: 5em;
+  line-height: 1em;
+}
+.hero-unit .sub {
+  text-transform: uppercase;
+  font-family: Aracne;
+  font-size: 12pt;
+  color: rgb(201, 9, 213);
+}
+
+.bio-unit {
+  font-family: AracneUC;
+  font-size: 24pt;
+  letter-spacing: 1px;
+}
+
+.portrait {
+  padding-left: 1em;
+}
+.portrait img {
+  width: 630px;
 }
