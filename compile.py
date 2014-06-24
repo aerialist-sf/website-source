@@ -9,11 +9,8 @@ TMPL_PATH = "templates/"
 STATIC_PATH = "static/"
 OUTPUT = "site/"
 
-'''
-PAGES = [{"url":"/", "name":"Home"},
-        {"url":"/photos/", "name":"Photos"},
-        {"url":"/video/", "Video"), ("/performances/", "Performances"), ("contact", "Contact")]
-'''
+PAGES = ["index", "photos", "video", "performances", "contact"]
+
 def setup():
     shutil.rmtree(os.path.join(OUTPUT, STATIC_PATH))
     shutil.copytree(STATIC_PATH, os.path.join(OUTPUT, STATIC_PATH))
@@ -30,6 +27,10 @@ def tmpl_compile(tmpl_base, env_vars):
 
     ## render and write
     template = env.get_template("%s.html" % tmpl_base, globals=tmpl_globals)
+    try:
+        os.makedirs(out_path)
+    except OSError:
+        pass ## directory exists, ignore
     with closing(open(os.path.join(out_path, "index.html"), "w")) as f_out:
         print "writing to %s" % out_path
         f_out.write(template.render())
@@ -38,7 +39,8 @@ def get_valid_templates():
     """
     Get all templates we will be working with (necessary for directory tree)
     """
-    return [f.rsplit(".")[0] for f in os.listdir(TMPL_PATH) if not re.match("^_.*$", f) and re.match(".*html$", f)]
+    #return [f.rsplit(".")[0] for f in os.listdir(TMPL_PATH) if not re.match("^_.*$", f) and re.match(".*html$", f)]
+    return [p for p in PAGES if os.path.exists(os.path.join(TMPL_PATH, "%s.html" % p))]
 
 def compile_templates():
     pages = get_valid_templates()
