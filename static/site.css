@@ -58,6 +58,12 @@ body.page-contact .supercolumn {
   overflow-x: hidden;
   margin: 0 auto;
 }
+.column a:visited {
+  color: #fff;
+}
+.column a:hover {
+  color: rgb(201, 9, 213);
+}
 .half-col {
   width: 50%;
   overflow: none;
@@ -131,7 +137,7 @@ ul#navbar li.active a {
 .bigdot span {
   color: rgb(201, 9, 213);
   font-size: 5em;
-  line-height: .5em;
+  line-height: 1em;
 }
 
 body.page-contact {
