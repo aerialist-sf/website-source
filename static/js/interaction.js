@@ -17,7 +17,7 @@ $(function() {
     position: {my: "top", at: "top+10%", of: window},
     resizable: false,
     show: "slideDown",
-    width: 600
+    width: 900
     });
   $("#book-now a:first").on("click", function() {
     $("#book-dialog").dialog("open");
