@@ -17,7 +17,13 @@ $(function() {
     position: {my: "top", at: "top+10%", of: window},
     resizable: false,
     show: "slideDown",
-    width: 900
+    width: 900,
+    open: function(e, ui) {
+      $("body").addClass("isModal");
+    },
+    close: function(e, ui) {
+      $("body").removeClass("isModal");
+    }
     });
   $("#book-now a:first").on("click", function() {
     $("#book-dialog").dialog("open");

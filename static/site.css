@@ -31,6 +31,9 @@ body {
   font-family: Aracne;
   font-size: 14pt;
 }
+body.isModal {
+  overflow: hidden;
+}
 a {
   text-decoration: none;
 }
