@@ -41,7 +41,8 @@ body.page-contact .supercolumn {
 }
 .column {
   width: 1000px;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   margin: 0 auto;
 }
 .half-col {
@@ -136,4 +137,54 @@ body.page-contact {
   display: block;
   height: 88px;
   width: 130px;
+}
+
+#book-dialog {
+  /*
+  display: block;
+  position: absolute;
+  width: 600px;
+  left: 50%;
+  margin-left: -300px;
+  top: 200px;
+  background-color: 000;
+  z-index: 10;
+  */
+}
+#book-dialog .content {
+  padding: 1em;
+}
+
+.ui-dialog {
+  z-index: 10;
+  background-color: #000;
+  border: rgb(201, 9, 213) 2px solid;
+}
+.ui-dialog-titlebar {
+  text-align: center;
+}
+.ui-dialog-titlebar .ui-button-text {
+  display: none;
+}
+.ui-dialog-titlebar .ui-button-icon-primary {
+  background: #000 url(/static/img/close_btn.png) no-repeat center;
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+.ui-dialog-titlebar .ui-button {
+  background: none;
+  border: 0;
+  position: absolute;
+  right: 5px;
+  top: 2px;
+}
+.ui-widget-overlay {
+  background-color: #fff;
+  opacity: 0.23;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }

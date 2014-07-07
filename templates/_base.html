@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="/static/jquery/js/jquery-ui-1.10.4.custom.min.js"></script>
-    <link type="text/css" rel="stylehseet" href="https://code.jquery.com/ui/1.10.4/themes/dark-hive/jquery-ui.css" />
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="/static/jquery/js/jquery-ui-1.11.0.min.js"></script>
+    <script type="text/javascript" src="/static/js/interaction.js"></script>
+    <link type="text/css" rel="stylehseet" href="/static/jquery/css/jquery-ui.structure.min.css" />
+    <link type="text/css" rel="stylehseet" href="/static/jquery/css/jquery-ui.min.css" />
     <link type="text/css" rel="stylesheet" href="/static/site.css" />
   </head>
   <body class="page-{{current_page}}">
@@ -18,6 +20,20 @@
         {% block content %}{% endblock %}
       </div>
       <div id="book-now"><a href="#">&nbsp;</a>;</div>
+      <div id="book-dialog" title="Guide to Booking an Aerialist">
+        <div class="content">
+          <p>Thinking of having an aerialist at your event? You're brilliant.  Here are a few pointers on how to make it happen.  </p>
+
+          <ul>
+            <li>What are you looking for? Cassandra can provide a feature act to a single piece of music, or ambient performance that sets a mood and lasts longer.  For an evening of entertainment, Cassandra can also organize multiple performers.</li>
+            <li>Aerial acts require a safe rigging point.  This requires access to the ceiling, an exposed structural beam (or professionally installed rigging point), and a minimum ceiling height of 18' for tissu or 20' for rope.  For outdoor performances, please contact Cassandra for more information.</li>
+          </ul>
+
+          <p>Contact Cassandra for more information and a quote!</p>
+
+          <p>dandra.cassandra@gmail.com</p>
+        </div>
+      </div>  {# /#content #}
     </div>
   </body>
 </html>
