@@ -10,6 +10,18 @@
   font-family: MonicasSalon;
   src: url(/static/fonts/MonicasSalonShadowNF.ttf);
 }
+@font-face {
+  font-family: BlissfulThinking;
+  src: url(/static/fonts/BlissfulThinking.otf);
+}
+@font-face {
+  font-family: Champagne;
+  src: url(/static/fonts/Champagne & Limousines.ttf);
+}
+@font-face {
+  font-family: CaviarDreams;
+  src: url(/static/fonts/CaviarDreams.ttf);
+}
 
 /* basics */
 body {
@@ -40,6 +52,7 @@ body.page-contact .supercolumn {
   background: #000 url(/static/img/contact.jpg) no-repeat 100% 0;
 }
 .column {
+  position: relative;
   width: 1000px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -130,7 +143,7 @@ body.page-contact {
   top: -10px;
   height: 88px;
   width: 130px;
-  left: 1055px;
+  left: 829px;
   background: transparent url(/static/img/book_now.png) no-repeat 0 0;
 }
 #book-now a {
@@ -139,29 +152,50 @@ body.page-contact {
   width: 130px;
 }
 
+/* book-an-aerialist overlay [[[ */
 #book-dialog {
-  /*
-  display: block;
-  position: absolute;
-  width: 600px;
-  left: 50%;
-  margin-left: -300px;
-  top: 200px;
-  background-color: 000;
-  z-index: 10;
-  */
 }
 #book-dialog .content {
-  padding: 1em;
+  padding: 1em 3em;
+}
+#book-dialog .content a,
+#book-dialog .content a:visited {
+  color: #fff;
+}
+#book-dialog .content a:hover {
+  color: rgb(201, 9, 213);
+}
+
+#book-dialog .content p {
+  padding: 0;
+  margin: 0 0 1em 0;
+}
+
+#book-dialog .content ul {
+  padding: 0 2.5em;
+  list-style: lower-roman;
+}
+#book-dialog .content ul li {
+  margin-bottom: 1em;
 }
 
 .ui-dialog {
   z-index: 10;
   background-color: #000;
-  border: rgb(201, 9, 213) 2px solid;
+  border: rgb(201, 9, 213) 4px solid;
+  font-family: CaviarDreams;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
 }
 .ui-dialog-titlebar {
   text-align: center;
+  color: rgb(201, 9, 213);
+  text-transform: uppercase;
+  font-size: 1.2em;
+  line-height: 2em;
+  font-family: BlissfulThinking;
 }
 .ui-dialog-titlebar .ui-button-text {
   display: none;
@@ -188,3 +222,4 @@ body.page-contact {
   top: 0;
   bottom: 0;
 }
+/* ]]] book-an-aerialist overlay */
