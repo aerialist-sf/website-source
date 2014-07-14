@@ -166,6 +166,7 @@ body.page-contact {
 #book-dialog {
 }
 #book-dialog .content {
+  font-size: 13pt;
   padding: 1em 400px 3em 1em;
   background: transparent url(/static/img/rigging_drawing_sm.png) no-repeat right top;
 }
