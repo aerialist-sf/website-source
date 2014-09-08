@@ -32,7 +32,7 @@ body {
   margin: 0;
   background-color: #000;
   color: rgb(186, 200, 213);
-  font-family: Aracne;
+  font-family: PrintClearly;
   font-size: 14pt;
 }
 body.isModal {
@@ -44,6 +44,17 @@ a {
 p {
   margin: .5em 0;
   padding: 0 3em;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+ul li {
+  padding: 0;
+}
+h3 {
+  margin: 0;
 }
 
 /* structure */
@@ -94,6 +105,7 @@ ul#navbar {
   list-style: none;
   border-bottom: 1px solid #fff;
   margin: 0 0 1em 0;
+  font-family: Aracne;
 }
 
 ul#navbar li a,
@@ -146,7 +158,8 @@ ul#navbar li.active a {
 .bigdot span {
   color: rgb(201, 9, 213);
   font-size: 5em;
-  line-height: 1em;
+  line-height: .2em;
+  vertical-align: -22px;
 }
 
 body.page-contact {
@@ -192,15 +205,15 @@ body.page-contact {
   padding: 0 2.5em;
   list-style: lower-roman;
 }
+#book-dialog .content p,
 #book-dialog .content ul li {
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 .ui-dialog {
   z-index: 10;
   background-color: #000;
   border: rgb(201, 9, 213) 4px solid;
-  font-family: CaviarDreams;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   -o-border-radius: 15px;
@@ -242,7 +255,6 @@ body.page-contact {
 /* ]]] book-an-aerialist overlay */
 
 #site-credits {
-  font-family: PrintClearly;
   position: absolute;
   margin: 0 auto;
   top: -50px;
