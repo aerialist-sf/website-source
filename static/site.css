@@ -22,6 +22,10 @@
   font-family: CaviarDreams;
   src: url(/static/fonts/CaviarDreams.ttf);
 }
+@font-face {
+  font-family: PrintClearly;
+  src: url(/static/fonts/PrintClearly_TT.ttf);
+}
 
 /* basics */
 body {
@@ -45,11 +49,12 @@ p {
 /* structure */
 .supercolumn {
   max-width: 1400px;
-  min-height: 1000px;
+  min-height: 873px;
   margin: 0 auto;
+  position: relative;
 }
 body.page-index .supercolumn {
-  background: #000 url(/static/img/front.jpg) no-repeat 100% 0;
+  background: #000 url(/static/img/blindfolded.jpg) no-repeat -202px -327px;
 }
 body.page-contact .supercolumn {
   background: #000 url(/static/img/contact.jpg) no-repeat 100% 0;
@@ -235,3 +240,21 @@ body.page-contact {
   bottom: 0;
 }
 /* ]]] book-an-aerialist overlay */
+
+#site-credits {
+  font-family: PrintClearly;
+  position: absolute;
+  margin: 0 auto;
+  top: -50px;
+  width: 100%;
+  text-align: center;
+  font-size: .833em;
+}
+#site-credits a,
+#site-credits a:visited {
+  color: rgb(186, 200, 213);
+}
+#site-credits a:hover {
+  color: #fff;
+  text-decoration; underline;
+}

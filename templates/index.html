@@ -1,29 +1,30 @@
 {% extends "_base.html" %}
 
+{% block extraheader %}
+<script type="text/javascript">
+  $(document.body).ready(function() {
+    var top = $("body .supercolumn").height() - $("#site-credits").height() - 5;
+    var left = 0;
+    $("body .supercolumn").append($("#site-credits").detach());
+    $("#site-credits").offset({top:top, left:"0px"});
+    console.log("loaded");
+  });
+</script>
+{%endblock %}
+
 {% block content %}
 <div class="half-col">
   <div class="hero-unit">
     <div class="lead">CassandraDandra</div>
     <div class="sub">Aerialist &middot; Distinguished Circus entertainment</div>
   </div>
+  {#
   <div class="bio-unit">
     Cassandra first appeared on stage in the womb.  The stage tracked her through youth as a dancer and deposited her in San Francisco to train with the circus.  She now performs and makes art on rope and aerial fabric, and specializes in wielding her striking height at high velocity.  Her imagination thrives between 20 and 30 feet above ground, where she grapples with human limitations and seeks glimpses of the sublime.
-  </div>
+  </div>#}
 </div>
-<div class="half-col">
-  <div class="portrait">
-    {# <img src="/static/img/front.jpg" /> #}
-  </div>
-</div>
-<div style="clear: both;">
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  SITE CREDITS<br/>
-  Photography by Shoot That Clown<br/>
-  Web genius by <a href="http://www.hoprocker.net/">hoprocker</a><br/>
+<div id="site-credits">
+  Photography by Josh Bowers |
+  Web genius by <a href="http://www.hoprocker.net/">hoprocker</a></div>
 </div>
 {% endblock %}
