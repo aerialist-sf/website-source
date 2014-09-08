@@ -25,7 +25,8 @@ $(function() {
       $("body").removeClass("isModal");
     }
     });
-  $("#book-now a:first").on("click", function() {
+  $("#navtab-booking a:first").on("click", function(e) {
+    e.preventDefault();
     $("#book-dialog").dialog("open");
   });
 });

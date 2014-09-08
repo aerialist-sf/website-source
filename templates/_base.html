@@ -14,12 +14,11 @@
       <div class="column">
         <ul id="navbar">
           {% for page in nav_pages %}
-          <li{% if page.id == current_page %} class="active"{% endif %}><a href="{{page.url}}">{{ page.name }}</a></li>
+          <li id="navtab-{{page.id}}"{% if page.id == current_page %} class="active"{% endif %}><a href="{{page.url}}">{{ page.name }}</a></li>
           {% endfor %}
         </ul>
     
         {% block content %}{% endblock %}
-        <div id="book-now"><a href="#">&nbsp;</a></div>
       </div>
       <div id="book-dialog" title="Guide to Booking an Aerialist">
         <div class="content">

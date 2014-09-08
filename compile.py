@@ -9,7 +9,7 @@ TMPL_PATH = "templates/"
 STATIC_PATH = "static/"
 OUTPUT = "site/"
 
-PAGES = ["index", "photos", "video", "performances", "contact"]
+PAGES = ["index", "photos", "video", "bio", "booking"]
 
 def setup():
     shutil.rmtree(os.path.join(OUTPUT, STATIC_PATH))
