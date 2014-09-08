@@ -103,7 +103,7 @@ ul#navbar {
   overflow: auto;
   padding: 0 150px 0 100px;
   list-style: none;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid rgba(255,255,255,.2);
   margin: 0 0 1em 0;
   font-family: Aracne;
 }
@@ -119,8 +119,10 @@ ul#navbar li a:visited {
 }
 
 ul#navbar li a:hover,
-ul#navbar li.active a {
-  background-color: rgb(45,45,45);
+ul#navbar li.active a,
+ul#navbar li.active a:hover {
+  background-color: rgba(100,100,100,.2);
+  background-color: rgba(100,100,100,.2);
 }
 
 .hero-unit {
