@@ -7,6 +7,7 @@ from jinja2 import Template, FileSystemLoader, Environment
 
 TMPL_PATH = "templates/"
 STATIC_PATH = "static/"
+SLIDES_PATH = "slides/"
 OUTPUT = "site/"
 
 PAGES = ["index", "photos", "video", "bio", "booking"]
@@ -24,6 +25,7 @@ def tmpl_compile(tmpl_base, env_vars):
     env = Environment(loader=FileSystemLoader(os.path.join(os.path.dirname(os.path.abspath(__name__)), "templates/")))
     tmpl_globals = deepcopy(env_vars)
     tmpl_globals.update({"current_page":tmpl_base})
+    tmpl_globals.update({"slides":slides()})
 
     ## render and write
     template = env.get_template("%s.html" % tmpl_base, globals=tmpl_globals)
@@ -54,6 +56,23 @@ def compile_templates():
 def run_compilation():
     setup()
     compile_templates()
+
+def slides():
+    """
+    Assemble the slides.
+    """
+    print "copying slides"
+    slides_paths = []
+    try:
+        os.mkdir(os.path.join(OUTPUT, STATIC_PATH, SLIDES_PATH))
+    except OSError:
+        ## dir exists, pass
+        pass
+    for s in [l for l in os.listdir(SLIDES_PATH) if re.match("^.*\.(jpg|jpeg)$", l)]:
+        output_path = os.path.join(STATIC_PATH, SLIDES_PATH, s)
+        shutil.copyfile(os.path.join(SLIDES_PATH, s), os.path.join(OUTPUT, output_path))
+        slides_paths.append("/%s" % output_path)
+    return slides_paths
 
 if __name__ == "__main__":
     run_compilation()

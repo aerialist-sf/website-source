@@ -1,5 +1,31 @@
 {% extends "_base.html" %}
 
+{% block extraheader %}
+<link type="text/css" rel="stylesheet" href="/static/css/blueimp-gallery.css" />
+<script type="text/javascript">
+  $(document).ready(function() {
+      blueimp.Gallery(
+        //$.map($("#images").find("a"), function(el, i) { return el; }),
+        [{% for slide in slides %}"{{slide}}"{% if not loop.last %},{% endif %}{% endfor %}],
+        {
+container: "#blueimp-gallery-carousel",
+startSlideshow: false,
+          carousel: true
+        }
+      );
+    });
+</script>
+{% endblock %}
+
 {% block content %}
-<div style="text-align: center;"><img src="/static/img/coming_soon.png" /></div>
+<div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel">
+  <div class="slides"></div>
+  <h3 class="title"></h3>
+  <a class="prev">&lt;</a>
+  <a class="next">&gt;</a>
+  <a class="play-pause"></a>
+  <ol class="indicator"></ol>
+</div>
+<script type="text/javascript" src="/static/js/blueimp-helper.js"></script>
+<script type="text/javascript" src="/static/js/blueimp-gallery.js"></script>
 {% endblock %}
