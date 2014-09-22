@@ -101,7 +101,7 @@ body.page-contact .supercolumn {
 ul#navbar {
   width: 100%;
   overflow: auto;
-  padding: 0 150px 0 100px;
+  padding: 0 150px 0 50px;
   list-style: none;
   border-bottom: 1px solid rgba(255,255,255,.2);
   margin: 0 0 1em 0;
@@ -142,6 +142,9 @@ ul#navbar li.active a:hover {
   font-family: Aracne;
   font-size: 12pt;
   color: rgb(201, 9, 213);
+}
+.hero-unit img {
+  width: 100%;
 }
 
 .bio-unit {
