@@ -1,4 +1,5 @@
 import os
+import json
 import re
 import shutil
 from copy import deepcopy
@@ -8,6 +9,7 @@ from jinja2 import Template, FileSystemLoader, Environment
 TMPL_PATH = "templates/"
 STATIC_PATH = "static/"
 SLIDES_PATH = "slides/"
+CAPTIONS_PATH = os.path.join(SLIDES_PATH, "_ATTRIBUTIONS.txt")
 OUTPUT = "site/"
 
 PAGES = ["index", "photos", "video", "bio", "booking"]
@@ -68,10 +70,14 @@ def slides():
     except OSError:
         ## dir exists, pass
         pass
+    
+    with closing(open(CAPTIONS_PATH, "r")) as f:
+        captions = json.loads(f.read())['captions']
     for s in [l for l in os.listdir(SLIDES_PATH) if re.match("^.*\.(jpg|jpeg)$", l)]:
         output_path = os.path.join(STATIC_PATH, SLIDES_PATH, s)
         shutil.copyfile(os.path.join(SLIDES_PATH, s), os.path.join(OUTPUT, output_path))
-        slides_paths.append("/%s" % output_path)
+        title = captions[s] if s in captions.keys() else s
+        slides_paths.append({"title":title, "href":"/%s" % output_path})
     return slides_paths
 
 if __name__ == "__main__":

@@ -272,3 +272,31 @@ body.page-contact {
   color: #fff;
   text-decoration; underline;
 }
+
+
+/* 
+ * photo viewer style overrides
+ */
+.blueimp-gallery-carousel {
+  padding-bottom: 60% !important;
+}
+.blueimp-gallery > .slides {
+  height: 90% !important;
+}
+
+.blueimp-gallery > .prev,
+.blueimp-gallery > .next {
+  border: none !important;
+  font-size: 30px !important;
+}
+
+.blueimp-gallery > .play-pause {
+  display: none !important;
+}
+
+.blueimp-gallery > .title {
+  right: 0;
+  top: 550px !important;
+  text-align: center;
+  font-size: 14px;
+}

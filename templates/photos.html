@@ -6,26 +6,28 @@
   $(document).ready(function() {
       blueimp.Gallery(
         //$.map($("#images").find("a"), function(el, i) { return el; }),
-        [{% for slide in slides %}"{{slide}}"{% if not loop.last %},{% endif %}{% endfor %}],
+        [{% for slide in slides %}{"title":"{{slide.title}}","href":"{{slide.href}}"}{% if not loop.last %},{% endif %}{% endfor %}],
         {
-container: "#blueimp-gallery-carousel",
-startSlideshow: false,
+          container: "#photo-viewer",
+          startSlideshow: false,
           carousel: true
         }
-      );
+        );
+
+      $("#photo-viewer")
     });
 </script>
 {% endblock %}
 
 {% block content %}
-<div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel">
+<div id="photo-viewer" class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls">
   <div class="slides"></div>
   <h3 class="title"></h3>
   <a class="prev">&lt;</a>
   <a class="next">&gt;</a>
   <a class="play-pause"></a>
-  <ol class="indicator"></ol>
 </div>
 <script type="text/javascript" src="/static/js/blueimp-helper.js"></script>
-<script type="text/javascript" src="/static/js/blueimp-gallery.js"></script>
+<script type="text/javascript" src="/static/js/blueimp-gallery-modified.js"></script>
+<script type="text/javascript" src="/static/js/jquery.blueimp-gallery.js"></script>
 {% endblock %}
