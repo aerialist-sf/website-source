@@ -273,6 +273,20 @@ body.page-contact {
   text-decoration; underline;
 }
 
+.bio-image {
+  text-align: center;
+  padding-top: 100px;
+}
+.bio-image img {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  border: 1px solid #fff;
+}
+.bio-image .caption {
+  font-size: .75em;
+  margin-top: 2em;
+}
 
 /* 
  * photo viewer style overrides
