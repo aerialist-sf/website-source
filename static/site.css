@@ -70,6 +70,11 @@ body.page-index .supercolumn {
 body.page-contact .supercolumn {
   background: #000 url(/static/img/contact.jpg) no-repeat 100% 0;
 }
+
+h1.superheader {
+  /* super-awesome header text */
+  display: none;
+}
 .column {
   position: relative;
   width: 1000px;
