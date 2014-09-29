@@ -226,7 +226,7 @@ body.page-contact {
 .ui-dialog {
   z-index: 10;
   background-color: #000;
-  border: rgb(201, 9, 213) 4px solid;
+  border: rgb(186, 200, 213) 4px solid;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   -o-border-radius: 15px;
@@ -234,7 +234,7 @@ body.page-contact {
 }
 .ui-dialog-titlebar {
   text-align: center;
-  color: rgb(201, 9, 213);
+  color: rgb(186, 200, 213);
   text-transform: uppercase;
   font-size: 1.2em;
   line-height: 2em;
@@ -244,7 +244,7 @@ body.page-contact {
   display: none;
 }
 .ui-dialog-titlebar .ui-button-icon-primary {
-  background: #000 url(/static/img/close_btn.png) no-repeat center;
+  background: #000 url(/static/img/close_circle.png) no-repeat center;
   display: block;
   width: 24px;
   height: 24px;
@@ -258,7 +258,7 @@ body.page-contact {
 }
 .ui-widget-overlay {
   background-color: #fff;
-  opacity: 0.23;
+  opacity: 0.45;
   position: absolute;
   left: 0;
   right: 0;
