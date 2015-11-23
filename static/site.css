@@ -85,7 +85,7 @@ body.page-contact .supercolumn {
   background: #000 url(/static/img/contact.jpg) no-repeat 100% 0;
 }
 body.page-about .supercolumn {
-  background: #000 url("/static/img/blindfolded.jpg") no-repeat scroll -111px -342px;
+  background: #000 url(/static/img/blindfolded.jpg) no-repeat scroll -111px -211px;
 }
 
 h1.superheader {
