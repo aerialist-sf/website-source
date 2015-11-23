@@ -1,0 +1,43 @@
+{
+  "name": "cassie_website",
+  "version": "2.0.0",
+  "description": "This is the source code for building the website. The compiles code is pushed to a site/ subdirectory, which is pushed to the actual github.io source repository.",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "array-differ": "^1.0.0",
+    "array-uniq": "^1.0.2",
+    "beeper": "^1.1.0",
+    "chalk": "^1.1.1",
+    "dateformat": "^1.0.12",
+    "gulp": "^3.9.0",
+    "gulp-changed": "^1.3.0",
+    "gulp-run-sequence": "^0.3.2",
+    "gulp-util": "^3.0.7",
+    "has-gulplog": "^0.1.0",
+    "lodash": "^3.10.1",
+    "lodash._reescape": "^3.0.0",
+    "lodash._reevaluate": "^3.0.0",
+    "lodash.template": "^3.6.2",
+    "minimist": "^1.2.0",
+    "multipipe": "^0.2.1",
+    "object-assign": "^4.0.1",
+    "replace-ext": "0.0.1",
+    "run-sequence": "^1.1.5",
+    "through2": "^2.0.0",
+    "vinyl": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aerialist-sf/website-source.git"
+  },
+  "author": "malcolm mcfarland",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aerialist-sf/website-source/issues"
+  },
+  "homepage": "https://github.com/aerialist-sf/website-source#readme"
+}
