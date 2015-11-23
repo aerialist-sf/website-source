@@ -229,7 +229,8 @@ ul#navbar li.active a:hover {
   color: rgb(201, 9, 213);
 }
 .hero-unit img {
-  width: 100%;
+  width: 479px;  /* NOTE scale picture, remove me */
+  margin: 111px 0 0 495px;
 }
 
 .bio-unit {
