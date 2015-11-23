@@ -16,8 +16,8 @@ SLIDES_PATHS = [{'page': 'photos_%s' % name,
 CAPTIONS_FILE = "_ATTRIBUTIONS.txt"
 OUTPUT = "site/"
 
-PAGES = ["index", "gallery", "video", "bio", "booking", "photos_rjmuna", "photos_vaudevire", "photos_other"]
-NAV_PAGES = ["index", "gallery", "video", "bio", "booking"]
+PAGES = ["index", "gallery", "video", "about", "booking", "photos_rjmuna", "photos_vaudevire", "photos_other"]
+NAV_PAGES = ["index", "gallery", "video", "about", "booking"]
 
 def setup():
     shutil.rmtree(os.path.join(OUTPUT, STATIC_PATH))
