@@ -17,7 +17,7 @@ $(function() {
     position: {my: "top", at: "top+10%", of: window},
     resizable: false,
     show: "slideDown",
-    width: 900,
+    width: 400,
     open: function(e, ui) {
       $("body").addClass("isModal");
       $("body").on("click", potential_close);

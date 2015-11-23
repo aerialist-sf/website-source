@@ -284,15 +284,14 @@ body.page-contact {
 }
 #book-dialog .content {
   font-size: 13pt;
-  padding: 1em 400px 3em 1em;
-  background: transparent url(/static/img/rigging_drawing_sm.png) no-repeat right top;
+  padding: 1em;
 }
 #book-dialog .content a,
 #book-dialog .content a:visited {
   color: #fff;
 }
 #book-dialog .content a:hover {
-  color: rgb(201, 9, 213);
+  color: #ffecb3;
 }
 
 #book-dialog .content p {
@@ -312,7 +311,7 @@ body.page-contact {
 .ui-dialog {
   z-index: 10;
   background-color: #000;
-  border: rgb(186, 200, 213) 4px solid;
+  border: #ffecb3 4px solid;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   -o-border-radius: 15px;
@@ -320,7 +319,7 @@ body.page-contact {
 }
 .ui-dialog-titlebar {
   text-align: center;
-  color: rgb(186, 200, 213);
+  color: #ffecb3;
   text-transform: uppercase;
   font-size: 1.2em;
   line-height: 2em;
