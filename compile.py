@@ -42,7 +42,7 @@ def tmpl_compile(tmpl_base, env_vars):
         pass ## directory exists, ignore
     with closing(open(os.path.join(out_path, "index.html"), "w")) as f_out:
         print "writing to %s" % out_path
-        f_out.write(template.render())
+        f_out.write(template.render().encode('utf-8'))
 
 def get_valid_templates():
     """
