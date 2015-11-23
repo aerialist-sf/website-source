@@ -79,7 +79,7 @@ h3 {
   position: relative;
 }
 body.page-index .supercolumn {
-  background: #000 url(/static/img/index_bg.jpg) no-repeat 0 center;
+  background: #000 url(/static/img/index_bg.jpg) no-repeat scroll 0 -83px;
 }
 body.page-contact .supercolumn {
   background: #000 url(/static/img/contact.jpg) no-repeat 100% 0;
