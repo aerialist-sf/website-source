@@ -6,7 +6,15 @@
   $(document).ready(function() {
       blueimp.Gallery(
         //$.map($("#images").find("a"), function(el, i) { return el; }),
-        [{% for slide in slides %}{"title":"{{slide.title}}","href":"{{slide.href}}"}{% if not loop.last %},{% endif %}{% endfor %}],
+        /* {{ current_page }} */
+        {# do an iterative by-name lookup #}
+        {% for name,slide_info in slides.items() %}
+        /* {{ name }} */
+        {% if name == current_page %}
+        [{% for slide in slide_info  %}{"title":"{{slide.title}}","href":"{{slide.href}}"}{% if not loop.last %},{% endif %}{% endfor %}],
+        {% endif %}
+        {% endfor %}
+
         {
           container: "#photo-viewer",
           startSlideshow: false,
@@ -26,6 +34,10 @@
   <a class="prev">&lt;</a>
   <a class="next">&gt;</a>
   <a class="play-pause"></a>
+</div>
+<div class="clearfix">
+  <div class="photo-nav-tab left">{% block photo_nav_left %}{% endblock %}</div>
+  <div class="photo-nav-tab right">{% block photo_nav_right %}{% endblock %}</div>
 </div>
 <script type="text/javascript" src="/static/js/blueimp-helper.js"></script>
 <script type="text/javascript" src="/static/js/blueimp-gallery-modified.js"></script>
