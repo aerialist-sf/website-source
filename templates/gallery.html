@@ -1,31 +1,62 @@
 {% extends "_base.html" %}
 
 {% block extraheader %}
+<link type="text/css" rel="stylesheet" href="/static/css/blueimp-gallery.css" />
+<script type="text/javascript">
+  $(document).ready(function() {
+        var options = {
+          container: "#photo-viewer",
+          startSlideshow: false
+        }
+
+      $('.links a').on('click', function (event) {
+        event.preventDefault();
+        event = event || window.event;
+        var target = event.target || event.srcElement,
+            link = target.href ? target : $(target).parents('a')[0];
+        console.log("target: ", target);
+        console.log("link: ", link);
+        options.index = link;
+        options.event = event;
+        links = $('.links a');
+        blueimp.Gallery(links, options);
+      });
+    });
+</script>
 {% endblock %}
 
 {% block content %}
+<div class="links">
+{% for slide in slides['gallery'] %}
 <div class="thirds-col centered photo-thumb">
-  <a href="/photos_rjmuna">
-    <img src="/static/img/photos_thumbnail_rjmuna.jpg" />
+  <a href="{{slide.href}}">
+    <img src="{{slide.postcard}}" />
     <div class="caption">
-      <p>Photos from RJ Muna</p>
+      <p>{{slide.title}}</p>
     </div>
   </a>
 </div>
-<div class="thirds-col centered photo-thumb">
-  <a href="/photos_vaudevire/">
-    <img src="/static/img/photos_thumbnail_vaudevire.jpg" />
-    <div class="caption">
-      <p>Photos from Vau de Vire</p>
-    </div>
-  </a>
+{% endfor %}
 </div>
-<div class="thirds-col centered photo-thumb">
-  <a href="/photos_other/">
-    <img src="/static/img/photos_thumbnail_other.jpg" />
-    <div class="caption">
-      <p><br/>shows</p>
-    </div>
-  </a>
+
+<div id="photo-viewer" class="blueimp-gallery blueimp-gallery-controls">
+  <div class="slides"></div>
+  <h3 class="title"></h3>
+  <a class="prev">&lt;</a>
+  <a class="next">&gt;</a>
+  <a class="close">×</a>
+  <a class="play-pause"></a>
+  <ol class="indicator"></ol>
 </div>
+<div class="clearfix">
+  <div class="photo-nav-tab left">{% block photo_nav_left %}{% endblock %}</div>
+  <div class="photo-nav-tab right">{% block photo_nav_right %}{% endblock %}</div>
+</div>
+
+<script type="text/javascript" src="/static/js/blueimp-helper.js"></script>
+<script type="text/javascript" src="/static/js/blueimp-gallery-modified.js"></script>
+<script type="text/javascript" src="/static/js/jquery.blueimp-gallery.js"></script>
+
+<script type="text/javascript">
+</script>
 {% endblock %}

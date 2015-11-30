@@ -134,8 +134,8 @@ h1.superheader {
  * gallery styles 
  */
 .photo-thumb {
+  margin: 1em 0;
   position: relative;
-  margin: 4em 0 8em
 }
 .photo-thumb a {
   display: block;

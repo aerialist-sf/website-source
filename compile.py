@@ -8,15 +8,16 @@ from jinja2 import Template, FileSystemLoader, Environment
 
 TMPL_PATH = "templates/"
 STATIC_PATH = "static/"
-SLIDES_PATHS = [{'page': 'photos_%s' % name,
+SLIDES_PATHS = [{'page': 'gallery',
                  'folder': 'slides/%s/' % name}
-                    for name in ['vaudevire', 'rjmuna', 'other']]
+                    for name in ['main']]
                 
 
 CAPTIONS_FILE = "_ATTRIBUTIONS.txt"
 OUTPUT = "site/"
 
-PAGES = ["index", "gallery", "video", "about", "booking", "photos_rjmuna", "photos_vaudevire", "photos_other"]
+PAGES = ["index", "gallery", "video", "about", "booking"]
+
 NAV_PAGES = ["index", "gallery", "video", "about", "booking"]
 
 def setup():
@@ -75,6 +76,7 @@ def slides():
         slides_paths = []
         try:
             os.makedirs(os.path.join(OUTPUT, STATIC_PATH, slide_info['folder']))
+            os.makedirs(os.path.join(OUTPUT, STATIC_PATH, slide_info['folder'], 'postcards'))
         except OSError, e:
             ## dir exists
             pass
@@ -84,9 +86,11 @@ def slides():
             captions = json.loads(f.read())['captions']
         for s in [l for l in os.listdir(slide_info['folder']) if re.match("^.*\.(jpg|jpeg|png)$", l)]:
             output_path = os.path.join(STATIC_PATH, slide_info['folder'], s)
+            postcard_path = os.path.join(STATIC_PATH, slide_info['folder'], "postcards", "postcard_%s" % s)
             shutil.copyfile(os.path.join(slide_info['folder'], s), os.path.join(OUTPUT, output_path))
+            shutil.copyfile(os.path.join(slide_info['folder'], 'postcards', 'postcard_%s' % s), os.path.join(OUTPUT, postcard_path))
             title = captions[s] if s in captions.keys() else s
-            slides_paths.append({"title":title, "href":"/%s" % output_path})
+            slides_paths.append({"title":title, "href":"/%s" % output_path, "postcard": "/%s" % postcard_path})
         all_slides.update({slide_info['page']: slides_paths})
     return all_slides
 
