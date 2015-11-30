@@ -220,14 +220,13 @@ ul#navbar li.active a:hover {
 
 .hero-unit {
   padding: .5em;
-  margin: 4em 0 8em;
+  margin: 111px 0 0 495px;
   text-align: center;
 }
 .hero-unit .lead {
-  color: #fff;
-  font-variant: small-caps;
-  font-family: MonicasSalon;
-  font-size: 5em;
+  color: #FFEBE2;
+  letter-spacing: .3em;
+  font-family: "Yanone Kaffeesatz";
   line-height: 1em;
 }
 .hero-unit .sub {
@@ -238,7 +237,6 @@ ul#navbar li.active a:hover {
 }
 .hero-unit img {
   width: 479px;  /* NOTE scale picture, remove me */
-  margin: 111px 0 0 495px;
 }
 
 .bio-unit {
