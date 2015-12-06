@@ -38,7 +38,7 @@ gulp.task('templates', function() {
 });
 
 gulp.task('build', function() {
-  return runSequence('templates');
+  return runSequence('templates', 'static', 'slides');
 });
 
 gulp.task('watch', function() {
