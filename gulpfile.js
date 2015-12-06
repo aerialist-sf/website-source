@@ -16,6 +16,16 @@ gulp.task('static', function() {
     .pipe(gulp.dest('site/static'));
 });
 
+gulp.task('slides', function() {
+  return gulp.src('slides/**')
+    .on('error', function (err) {
+      console.log(err);
+      gutil.beep();
+      this.end();
+    })
+    .pipe(gulp.dest('site/static/slides'));
+});
+
 gulp.task('templates', function() {
   exec('./env/bin/python compile.py', function(err, stdout, stderr) {
     console.log(stdout);
@@ -35,5 +45,6 @@ gulp.task('watch', function() {
   gulp.watch('*.py', ['templates']);
   gulp.watch('templates/**/*.html', ['templates']);
   gulp.watch('static/**/*.{js,jpg,jpeg,png}', ['static']);
+  gulp.watch('slides/**/*.{js,jpg,jpeg,png}', ['slides']);
   gulp.watch('static/**/*.css', ['static']);
 });
