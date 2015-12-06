@@ -408,3 +408,6 @@ body.page-contact {
   text-align: center;
   font-size: 14px;
 }
+.blueimp-gallery > .close {
+  font-size: 60px !important;
+}
