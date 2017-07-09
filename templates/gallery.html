@@ -9,7 +9,7 @@
           startSlideshow: false
         }
 
-      $('.links a').on('click', function (event) {
+      $('.gallery-links a').on('click', function (event) {
         event.preventDefault();
         event = event || window.event;
         var target = event.target || event.srcElement,
@@ -18,7 +18,7 @@
         console.log("link: ", link);
         options.index = link;
         options.event = event;
-        links = $('.links a');
+        links = $('.gallery-links a');
         blueimp.Gallery(links, options);
       });
     });
@@ -26,9 +26,9 @@
 {% endblock %}
 
 {% block content %}
-<div class="links">
+<div class="gallery-links">
 {% for slide in slides['gallery'] %}
-<div class="thirds-col centered photo-thumb">
+<div class="centered photo-thumb">
   <a href="{{slide.href}}">
     <img src="{{slide.thumbnail}}" />
     <div class="caption">

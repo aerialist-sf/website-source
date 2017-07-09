@@ -133,9 +133,15 @@ h1.superheader {
 /* 
  * gallery styles 
  */
+.gallery-links {
+  width: 900px;
+  margin: 0 auto;
+}
 .photo-thumb {
-  margin: 1em 0;
+  margin: 0;
   position: relative;
+  display: inline-block;
+  float: left;
 }
 .photo-thumb a {
   display: block;
