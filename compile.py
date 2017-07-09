@@ -76,7 +76,7 @@ def slides():
         slides_paths = []
         try:
             os.makedirs(os.path.join(OUTPUT, STATIC_PATH, slide_info['folder']))
-            os.makedirs(os.path.join(OUTPUT, STATIC_PATH, slide_info['folder'], 'postcards'))
+            os.makedirs(os.path.join(OUTPUT, STATIC_PATH, slide_info['folder'], 'thumbnails'))
         except OSError, e:
             ## dir exists
             pass
@@ -84,13 +84,13 @@ def slides():
         captions_path = os.path.join(slide_info['folder'], CAPTIONS_FILE)
         with closing(open(captions_path, "r")) as f:
             captions = json.loads(f.read())['captions']
-        for s in [l for l in os.listdir(slide_info['folder']) if re.match("^.*\.(jpg|jpeg|png)$", l)]:
+        for (s,v) in captions:
             output_path = os.path.join(STATIC_PATH, slide_info['folder'], s)
-            postcard_path = os.path.join(STATIC_PATH, slide_info['folder'], "postcards", "postcard_%s" % s)
+            thumbnail_path = os.path.join(STATIC_PATH, slide_info['folder'], "thumbnails", "THUMBNAIL%s" % s)
             shutil.copyfile(os.path.join(slide_info['folder'], s), os.path.join(OUTPUT, output_path))
-            shutil.copyfile(os.path.join(slide_info['folder'], 'postcards', 'postcard_%s' % s), os.path.join(OUTPUT, postcard_path))
-            title = captions[s] if s in captions.keys() else s
-            slides_paths.append({"title":title, "href":"/%s" % output_path, "postcard": "/%s" % postcard_path})
+            shutil.copyfile(os.path.join(slide_info['folder'], 'thumbnails', 'THUMBNAIL%s' % s), os.path.join(OUTPUT, thumbnail_path))
+            title = v
+            slides_paths.append({"title":title, "href":"/%s" % output_path, "thumbnail": "/%s" % thumbnail_path})
         all_slides.update({slide_info['page']: slides_paths})
     return all_slides
 

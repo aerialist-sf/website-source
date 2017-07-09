@@ -168,8 +168,8 @@ h1.superheader {
 .photo-thumb a .caption p {
   padding: 1em 0;
 }
-.photo-thumb a:hover img { opacity: 0; }
-.photo-thumb a:hover .caption { opacity: 1; }
+/*.photo-thumb a:hover img { opacity: 0; }
+.photo-thumb a:hover .caption { opacity: 1; }*/
 
 .photo-nav-tab a:visited,
 .photo-nav-tab a:hover,
