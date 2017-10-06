@@ -3,11 +3,14 @@
         ["000_straps.jpg", "RJ Muna"],
         ["10869845_435141813304750_7848431832534633072_o.jpg", "Treat St Social Club"],
         ["10879845_CassandraCornell_151028_474.jpg", "RJ Muna"],
-        ["20170616_0968_The_Soiled_Dove_by_Jon_Bauer.jpg", ""],
         ["codymolicaTSD2017split.jpg", ""],
         ["full_body.jpg", ""],
         ["SFstationSD2017.jpg", ""],
-        ["spinsdove.jpg", ""]
-
+        ["spinsdove.jpg", ""],
+        ["RJMUNAjun17.jpg", ""],
+        ["FINA2.jpg", ""],
+        ["bcarnival.jpg", ""],
+        ["AR9A5620withinsignia.jpg", ""],
+        ["Leori SD 2016with insignia.jpg", ""]
     ]
 }
