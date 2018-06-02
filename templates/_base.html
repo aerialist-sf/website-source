@@ -19,8 +19,6 @@
           {% for page in nav_pages %}
           <li id="navtab-{{page.id}}"{% if page.id == current_page %} class="active"{% endif %}><a href="{{page.url}}">{{ page.name }}</a></li>
           {% endfor %}
-          {# ...and a static page #}
-          <li id="navtab-shows"><a href="http://cassandradandra.blogspot.com/" target="_new">Shows</a></li>
         </ul>
     
         {% block content %}{% endblock %}
