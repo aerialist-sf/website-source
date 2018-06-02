@@ -31,6 +31,7 @@ $(function() {
     e.preventDefault();
     $("#book-dialog").dialog("open");
   });
+  $("#navbar").css("visibility", "visible");
 });
 
 

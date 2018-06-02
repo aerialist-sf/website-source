@@ -197,6 +197,7 @@ h1.superheader {
 
 /* elements */
 ul#navbar {
+  visibility: hidden;
   width: 100%;
   overflow: auto;
   padding: 0 150px 0 50px;
