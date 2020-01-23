@@ -14,7 +14,7 @@
     "gulp-run-sequence": "^0.3.2",
     "gulp-util": "^3.0.7",
     "has-gulplog": "^0.1.0",
-    "lodash": "^3.10.1",
+    "lodash": "^4.17.15",
     "lodash._reescape": "^3.0.0",
     "lodash._reevaluate": "^3.0.0",
     "lodash.template": "^3.6.2",
